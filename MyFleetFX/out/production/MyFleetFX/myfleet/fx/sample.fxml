@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myfleet.fx.Controller">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="37.0" prefWidth="123.0" text="My Fleet">
+         <font>
+            <Font name="JetBrains Mono Bold Italic" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3682613670825958" green="0.21320000290870667" blue="0.5199999809265137" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.3277639530750084">
+                     <color>
+                        <Color red="0.10177875310182571" green="0.10526315867900848" blue="0.09892787784337997" opacity="0.18000000715255737" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4379783272743225" green="0.2160000056028366" blue="0.7200000286102295" opacity="0.8500000238418579" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ComboBox fx:id="Cbx_Action" layoutX="252.0" layoutY="98.0" onAction="#changeAction" prefHeight="25.0" prefWidth="243.0" promptText="Actions" />
+      <Label layoutX="14.0" layoutY="69.0" prefHeight="44.0" prefWidth="130.0" text="Select a vehicle from the list:" wrapText="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="67.0" prefHeight="25.0" prefWidth="166.0" text="Selec an action:" wrapText="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </Label>
+      <ListView fx:id="Lstv_Vehicles" layoutX="14.0" layoutY="113.0" prefHeight="254.0" prefWidth="200.0" />
+      <Label layoutX="252.0" layoutY="33.0" prefHeight="25.0" prefWidth="166.0" text="Date:" wrapText="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_LitterRefueled" layoutX="252.0" layoutY="145.0" prefHeight="25.0" prefWidth="166.0" text="Litters Refueled:" wrapText="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="Cal_ActionDate" layoutX="304.0" layoutY="33.0" promptText="Select" />
+      <Label fx:id="Lbl_PartialKms" layoutX="252.0" layoutY="191.0" prefHeight="25.0" prefWidth="166.0" text="Partial kilometers:" wrapText="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_TotalCost" layoutX="252.0" layoutY="249.0" prefHeight="25.0" prefWidth="166.0" text="Total cost:" wrapText="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_Concept" layoutX="252.0" layoutY="146.0" prefHeight="25.0" prefWidth="166.0" text="Concept (cost name):" wrapText="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_PaidDate" layoutX="252.0" layoutY="289.0" prefHeight="25.0" prefWidth="123.0" text="Paid date:" wrapText="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="Chk_Paid" layoutX="252.0" layoutY="314.0" mnemonicParsing="false" text="Paid">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font>
+      </CheckBox>
+      <DatePicker fx:id="Cal_PaidDate" layoutX="381.0" layoutY="289.0" />
+      <Slider fx:id="Sld_Litters" layoutX="398.0" layoutY="151.0" prefHeight="14.0" prefWidth="155.0" />
+      <Button fx:id="Btn_Save" layoutX="478.0" layoutY="363.0" mnemonicParsing="false" onAction="#Save" prefHeight="25.0" prefWidth="97.0" text="Save" />
+      <TextField fx:id="Txt_Cost" layoutX="404.0" layoutY="249.0" />
+      <TextField fx:id="Txt_Concept" layoutX="252.0" layoutY="168.0" prefHeight="71.0" prefWidth="301.0" />
+      <TextField fx:id="Txt_Kms" layoutX="404.0" layoutY="191.0" />
+   </children>
+</AnchorPane>
